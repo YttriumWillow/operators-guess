@@ -1,0 +1,1235 @@
+[
+ {
+  "name": "能天使",
+  "en": "Exusiai",
+  "ja": "エクシア",
+  "charId": "char_103_angel",
+  "sortId": 73,
+  "profession": "狙击",
+  "subProfession": "速射手"
+ },
+ {
+  "name": "推进之王",
+  "en": "Siege",
+  "ja": "シージ",
+  "charId": "char_112_siege",
+  "sortId": 74,
+  "profession": "先锋",
+  "subProfession": "尖兵"
+ },
+ {
+  "name": "伊芙利特",
+  "en": "Ifrit",
+  "ja": "イフリータ",
+  "charId": "char_134_ifrit",
+  "sortId": 75,
+  "profession": "术师",
+  "subProfession": "轰击术师"
+ },
+ {
+  "name": "艾雅法拉",
+  "en": "Eyjafjalla",
+  "ja": "エイヤフィヤトラ",
+  "charId": "char_180_amgoat",
+  "sortId": 76,
+  "profession": "术师",
+  "subProfession": "中坚术师"
+ },
+ {
+  "name": "安洁莉娜",
+  "en": "Angelina",
+  "ja": "アンジェリーナ",
+  "charId": "char_291_aglina",
+  "sortId": 77,
+  "profession": "辅助",
+  "subProfession": "凝滞师"
+ },
+ {
+  "name": "闪灵",
+  "en": "Shining",
+  "ja": "シャイニング",
+  "charId": "char_147_shining",
+  "sortId": 78,
+  "profession": "医疗",
+  "subProfession": "医师"
+ },
+ {
+  "name": "夜莺",
+  "en": "Nightingale",
+  "ja": "ナイチンゲール",
+  "charId": "char_179_cgbird",
+  "sortId": 79,
+  "profession": "医疗",
+  "subProfession": "群愈师"
+ },
+ {
+  "name": "星熊",
+  "en": "Hoshiguma",
+  "ja": "ホシグマ",
+  "charId": "char_136_hsguma",
+  "sortId": 80,
+  "profession": "重装",
+  "subProfession": "铁卫"
+ },
+ {
+  "name": "塞雷娅",
+  "en": "Saria",
+  "ja": "サリア",
+  "charId": "char_202_demkni",
+  "sortId": 81,
+  "profession": "重装",
+  "subProfession": "守护者"
+ },
+ {
+  "name": "银灰",
+  "en": "SilverAsh",
+  "ja": "シルバーアッシュ",
+  "charId": "char_172_svrash",
+  "sortId": 82,
+  "profession": "近卫",
+  "subProfession": "领主"
+ },
+ {
+  "name": "斯卡蒂",
+  "en": "Skadi",
+  "ja": "スカジ",
+  "charId": "char_263_skadi",
+  "sortId": 89,
+  "profession": "近卫",
+  "subProfession": "无畏者"
+ },
+ {
+  "name": "陈",
+  "en": "Ch'en",
+  "ja": "チェン",
+  "charId": "char_010_chen",
+  "sortId": 94,
+  "profession": "近卫",
+  "subProfession": "剑豪"
+ },
+ {
+  "name": "黑",
+  "en": "Schwarz",
+  "ja": "シュヴァルツ",
+  "charId": "char_340_shwaz",
+  "sortId": 98,
+  "profession": "狙击",
+  "subProfession": "重射手"
+ },
+ {
+  "name": "赫拉格",
+  "en": "Hellagur",
+  "ja": "ヘラグ",
+  "charId": "char_188_helage",
+  "sortId": 101,
+  "profession": "近卫",
+  "subProfession": "武者"
+ },
+ {
+  "name": "麦哲伦",
+  "en": "Magallan",
+  "ja": "マゼラン",
+  "charId": "char_248_mgllan",
+  "sortId": 106,
+  "profession": "辅助",
+  "subProfession": "召唤师"
+ },
+ {
+  "name": "莫斯提马",
+  "en": "Mostima",
+  "ja": "モスティマ",
+  "charId": "char_213_mostma",
+  "sortId": 112,
+  "profession": "术师",
+  "subProfession": "扩散术师"
+ },
+ {
+  "name": "煌",
+  "en": "Blaze",
+  "ja": "ブレイズ",
+  "charId": "char_017_huang",
+  "sortId": 117,
+  "profession": "近卫",
+  "subProfession": "强攻手"
+ },
+ {
+  "name": "阿",
+  "en": "Aak",
+  "ja": "ア",
+  "charId": "char_225_haak",
+  "sortId": 120,
+  "profession": "特种",
+  "subProfession": "怪杰"
+ },
+ {
+  "name": "年",
+  "en": "Nian",
+  "ja": "ニェン",
+  "charId": "char_2014_nian",
+  "sortId": 121,
+  "profession": "重装",
+  "subProfession": "铁卫"
+ },
+ {
+  "name": "刻俄柏",
+  "en": "Ceobe",
+  "ja": "ケオベ",
+  "charId": "char_2013_cerber",
+  "sortId": 123,
+  "profession": "术师",
+  "subProfession": "中坚术师"
+ },
+ {
+  "name": "风笛",
+  "en": "Bagpipe",
+  "ja": "バグパイプ",
+  "charId": "char_222_bpipe",
+  "sortId": 128,
+  "profession": "先锋",
+  "subProfession": "冲锋手"
+ },
+ {
+  "name": "傀影",
+  "en": "Phantom",
+  "ja": "ファントム",
+  "charId": "char_250_phatom",
+  "sortId": 133,
+  "profession": "特种",
+  "subProfession": "处决者"
+ },
+ {
+  "name": "温蒂",
+  "en": "Weedy",
+  "ja": "ウィーディ",
+  "charId": "char_400_weedy",
+  "sortId": 136,
+  "profession": "特种",
+  "subProfession": "推击手"
+ },
+ {
+  "name": "W",
+  "en": "W",
+  "ja": "W",
+  "charId": "char_113_cqbw",
+  "sortId": 137,
+  "profession": "狙击",
+  "subProfession": "炮手"
+ },
+ {
+  "name": "早露",
+  "en": "Роса",
+  "ja": "ロサ",
+  "charId": "char_197_poca",
+  "sortId": 143,
+  "profession": "狙击",
+  "subProfession": "攻城手"
+ },
+ {
+  "name": "铃兰",
+  "en": "Suzuran",
+  "ja": "スズラン",
+  "charId": "char_358_lisa",
+  "sortId": 147,
+  "profession": "辅助",
+  "subProfession": "凝滞师"
+ },
+ {
+  "name": "棘刺",
+  "en": "Thorns",
+  "ja": "ソーンズ",
+  "charId": "char_293_thorns",
+  "sortId": 153,
+  "profession": "近卫",
+  "subProfession": "领主"
+ },
+ {
+  "name": "森蚺",
+  "en": "Eunectes",
+  "ja": "ユーネクテス",
+  "charId": "char_416_zumama",
+  "sortId": 157,
+  "profession": "重装",
+  "subProfession": "决战者"
+ },
+ {
+  "name": "史尔特尔",
+  "en": "Surtr",
+  "ja": "スルト",
+  "charId": "char_350_surtr",
+  "sortId": 161,
+  "profession": "近卫",
+  "subProfession": "术战者"
+ },
+ {
+  "name": "瑕光",
+  "en": "Blemishine",
+  "ja": "ブレミシャイン",
+  "charId": "char_423_blemsh",
+  "sortId": 165,
+  "profession": "重装",
+  "subProfession": "守护者"
+ },
+ {
+  "name": "泥岩",
+  "en": "Mudrock",
+  "ja": "マドロック",
+  "charId": "char_311_mudrok",
+  "sortId": 168,
+  "profession": "重装",
+  "subProfession": "不屈者"
+ },
+ {
+  "name": "迷迭香",
+  "en": "Rosmontis",
+  "ja": "ロスモンティス",
+  "charId": "char_391_rosmon",
+  "sortId": 169,
+  "profession": "狙击",
+  "subProfession": "投掷手"
+ },
+ {
+  "name": "山",
+  "en": "Mountain",
+  "ja": "マウンテン",
+  "charId": "char_264_f12yin",
+  "sortId": 174,
+  "profession": "近卫",
+  "subProfession": "斗士"
+ },
+ {
+  "name": "空弦",
+  "en": "Archetto",
+  "ja": "アルケット",
+  "charId": "char_332_archet",
+  "sortId": 177,
+  "profession": "狙击",
+  "subProfession": "速射手"
+ },
+ {
+  "name": "嵯峨",
+  "en": "Saga",
+  "ja": "サガ",
+  "charId": "char_362_saga",
+  "sortId": 181,
+  "profession": "先锋",
+  "subProfession": "尖兵"
+ },
+ {
+  "name": "夕",
+  "en": "Dusk",
+  "ja": "シー",
+  "charId": "char_2015_dusk",
+  "sortId": 182,
+  "profession": "术师",
+  "subProfession": "扩散术师"
+ },
+ {
+  "name": "灰烬",
+  "en": "Ash",
+  "ja": "Ash",
+  "charId": "char_456_ash",
+  "sortId": 186,
+  "profession": "狙击",
+  "subProfession": "速射手"
+ },
+ {
+  "name": "异客",
+  "en": "Passenger",
+  "ja": "パッセンジャー",
+  "charId": "char_472_pasngr",
+  "sortId": 189,
+  "profession": "术师",
+  "subProfession": "链术师"
+ },
+ {
+  "name": "歌蕾蒂娅",
+  "en": "Gladiia",
+  "ja": "グレイディーア",
+  "charId": "char_474_glady",
+  "sortId": 191,
+  "profession": "特种",
+  "subProfession": "钩索师"
+ },
+ {
+  "name": "凯尔希",
+  "en": "Kal'tsit",
+  "ja": "ケルシー",
+  "charId": "char_003_kalts",
+  "sortId": 192,
+  "profession": "医疗",
+  "subProfession": "医师"
+ },
+ {
+  "name": "浊心斯卡蒂",
+  "en": "Skadi the Corrupting Heart",
+  "ja": "濁心スカジ",
+  "charId": "char_1012_skadi2",
+  "sortId": 193,
+  "profession": "辅助",
+  "subProfession": "吟游者"
+ },
+ {
+  "name": "卡涅利安",
+  "en": "Carnelian",
+  "ja": "カーネリアン",
+  "charId": "char_426_billro",
+  "sortId": 197,
+  "profession": "术师",
+  "subProfession": "阵法术师"
+ },
+ {
+  "name": "帕拉斯",
+  "en": "Pallas",
+  "ja": "パラス",
+  "charId": "char_485_pallas",
+  "sortId": 198,
+  "profession": "近卫",
+  "subProfession": "教官"
+ },
+ {
+  "name": "水月",
+  "en": "Mizuki",
+  "ja": "ミヅキ",
+  "charId": "char_437_mizuki",
+  "sortId": 201,
+  "profession": "特种",
+  "subProfession": "伏击客"
+ },
+ {
+  "name": "假日威龙陈",
+  "en": "Ch'en the Holungday",
+  "ja": "遊龍チェン",
+  "charId": "char_1013_chen2",
+  "sortId": 202,
+  "profession": "狙击",
+  "subProfession": "散射手"
+ },
+ {
+  "name": "琴柳",
+  "en": "Saileach",
+  "ja": "サイラッハ",
+  "charId": "char_479_sleach",
+  "sortId": 205,
+  "profession": "先锋",
+  "subProfession": "执旗手"
+ },
+ {
+  "name": "远牙",
+  "en": "Fartooth",
+  "ja": "ファートゥース",
+  "charId": "char_430_fartth",
+  "sortId": 207,
+  "profession": "狙击",
+  "subProfession": "神射手"
+ },
+ {
+  "name": "焰尾",
+  "en": "Flametail",
+  "ja": "フレイムテイル",
+  "charId": "char_420_flamtl",
+  "sortId": 213,
+  "profession": "先锋",
+  "subProfession": "尖兵"
+ },
+ {
+  "name": "耀骑士临光",
+  "en": "Nearl the Radiant Knight",
+  "ja": "耀騎士ニアール",
+  "charId": "char_1014_nearl2",
+  "sortId": 214,
+  "profession": "近卫",
+  "subProfession": "无畏者"
+ },
+ {
+  "name": "灵知",
+  "en": "Gnosis",
+  "ja": "ノーシス",
+  "charId": "char_206_gnosis",
+  "sortId": 217,
+  "profession": "辅助",
+  "subProfession": "削弱者"
+ },
+ {
+  "name": "老鲤",
+  "en": "Lee",
+  "ja": "リー",
+  "charId": "char_322_lmlee",
+  "sortId": 222,
+  "profession": "特种",
+  "subProfession": "行商"
+ },
+ {
+  "name": "令",
+  "en": "Ling",
+  "ja": "リィン",
+  "charId": "char_2023_ling",
+  "sortId": 223,
+  "profession": "辅助",
+  "subProfession": "召唤师"
+ },
+ {
+  "name": "澄闪",
+  "en": "Goldenglow",
+  "ja": "ゴールデングロー",
+  "charId": "char_377_gdglow",
+  "sortId": 225,
+  "profession": "术师",
+  "subProfession": "驭械术师"
+ },
+ {
+  "name": "菲亚梅塔",
+  "en": "Fiammetta",
+  "ja": "フィアメッタ",
+  "charId": "char_300_phenxi",
+  "sortId": 228,
+  "profession": "狙击",
+  "subProfession": "炮手"
+ },
+ {
+  "name": "号角",
+  "en": "Horn",
+  "ja": "ホルン",
+  "charId": "char_4039_horn",
+  "sortId": 232,
+  "profession": "重装",
+  "subProfession": "要塞"
+ },
+ {
+  "name": "流明",
+  "en": "Lumen",
+  "ja": "ルーメン",
+  "charId": "char_4042_lumen",
+  "sortId": 234,
+  "profession": "医疗",
+  "subProfession": "疗养师"
+ },
+ {
+  "name": "艾丽妮",
+  "en": "Irene",
+  "ja": "アイリーニ",
+  "charId": "char_4009_irene",
+  "sortId": 235,
+  "profession": "近卫",
+  "subProfession": "剑豪"
+ },
+ {
+  "name": "归溟幽灵鲨",
+  "en": "Specter the Unchained",
+  "ja": "帰溟スペクター",
+  "charId": "char_1023_ghost2",
+  "sortId": 236,
+  "profession": "特种",
+  "subProfession": "傀儡师"
+ },
+ {
+  "name": "黑键",
+  "en": "Ebenholz",
+  "ja": "エーベンホルツ",
+  "charId": "char_4046_ebnhlz",
+  "sortId": 240,
+  "profession": "术师",
+  "subProfession": "秘术师"
+ },
+ {
+  "name": "多萝西",
+  "en": "Dorothy",
+  "ja": "ドロシー",
+  "charId": "char_4048_doroth",
+  "sortId": 243,
+  "profession": "特种",
+  "subProfession": "陷阱师"
+ },
+ {
+  "name": "鸿雪",
+  "en": "Позёмка",
+  "ja": "パゼオンカ",
+  "charId": "char_4055_bgsnow",
+  "sortId": 246,
+  "profession": "狙击",
+  "subProfession": "重射手"
+ },
+ {
+  "name": "百炼嘉维尔",
+  "en": "Gavial the Invincible",
+  "ja": "百錬ガヴィル",
+  "charId": "char_1026_gvial2",
+  "sortId": 247,
+  "profession": "近卫",
+  "subProfession": "强攻手"
+ },
+ {
+  "name": "玛恩纳",
+  "en": "Młynar",
+  "ja": "ムリナール",
+  "charId": "char_4064_mlynar",
+  "sortId": 249,
+  "profession": "近卫",
+  "subProfession": "解放者"
+ },
+ {
+  "name": "白铁",
+  "en": "Stainless",
+  "ja": "ステインレス",
+  "charId": "char_4072_ironmn",
+  "sortId": 255,
+  "profession": "辅助",
+  "subProfession": "工匠"
+ },
+ {
+  "name": "伺夜",
+  "en": "Vigil",
+  "ja": "ヴィジェル",
+  "charId": "char_427_vigil",
+  "sortId": 259,
+  "profession": "先锋",
+  "subProfession": "战术家"
+ },
+ {
+  "name": "斥罪",
+  "en": "Penance",
+  "ja": "ペナンス",
+  "charId": "char_4065_judge",
+  "sortId": 260,
+  "profession": "重装",
+  "subProfession": "不屈者"
+ },
+ {
+  "name": "缄默德克萨斯",
+  "en": "Texas the Omertosa",
+  "ja": "血掟テキサス",
+  "charId": "char_1028_texas2",
+  "sortId": 261,
+  "profession": "特种",
+  "subProfession": "处决者"
+ },
+ {
+  "name": "焰影苇草",
+  "en": "Reed The Flame Shadow",
+  "ja": "焔影リード",
+  "charId": "char_1020_reed2",
+  "sortId": 264,
+  "profession": "医疗",
+  "subProfession": "咒愈师"
+ },
+ {
+  "name": "林",
+  "en": "Lin",
+  "ja": "リン",
+  "charId": "char_4080_lin",
+  "sortId": 267,
+  "profession": "术师",
+  "subProfession": "阵法术师"
+ },
+ {
+  "name": "重岳",
+  "en": "Chongyue",
+  "ja": "チョンユエ",
+  "charId": "char_2024_chyue",
+  "sortId": 268,
+  "profession": "近卫",
+  "subProfession": "斗士"
+ },
+ {
+  "name": "仇白",
+  "en": "Qiubai",
+  "ja": "チューバイ",
+  "charId": "char_4082_qiubai",
+  "sortId": 270,
+  "profession": "近卫",
+  "subProfession": "领主"
+ },
+ {
+  "name": "麒麟R夜刀",
+  "en": "Kirin R Yato",
+  "ja": "キリンRヤトウ",
+  "charId": "char_1029_yato2",
+  "sortId": 273,
+  "profession": "特种",
+  "subProfession": "处决者"
+ },
+ {
+  "name": "伊内丝",
+  "en": "Ines",
+  "ja": "イネス",
+  "charId": "char_4087_ines",
+  "sortId": 278,
+  "profession": "先锋",
+  "subProfession": "情报官"
+ },
+ {
+  "name": "淬羽赫默",
+  "en": "Silence the Paradigmatic",
+  "ja": "淬羽サイレンス",
+  "charId": "char_1031_slent2",
+  "sortId": 280,
+  "profession": "辅助",
+  "subProfession": "护佑者"
+ },
+ {
+  "name": "霍尔海雅",
+  "en": "Ho'olheyak",
+  "ja": "ホルハイヤ",
+  "charId": "char_4027_heyak",
+  "sortId": 281,
+  "profession": "术师",
+  "subProfession": "中坚术师"
+ },
+ {
+  "name": "缪尔赛思",
+  "en": "Muelsyse",
+  "ja": "ミュルジス",
+  "charId": "char_249_mlyss",
+  "sortId": 282,
+  "profession": "先锋",
+  "subProfession": "战术家"
+ },
+ {
+  "name": "圣约送葬人",
+  "en": "Executor the Ex Foedere",
+  "ja": "聖約イグゼキュター",
+  "charId": "char_1032_excu2",
+  "sortId": 286,
+  "profession": "近卫",
+  "subProfession": "收割者"
+ },
+ {
+  "name": "提丰",
+  "en": "Typhon",
+  "ja": "ティフォン",
+  "charId": "char_2012_typhon",
+  "sortId": 288,
+  "profession": "狙击",
+  "subProfession": "攻城手"
+ },
+ {
+  "name": "琳琅诗怀雅",
+  "en": "Swire the Elegant Wit",
+  "ja": "琳琅スワイヤー",
+  "charId": "char_1033_swire2",
+  "sortId": 292,
+  "profession": "特种",
+  "subProfession": "行商"
+ },
+ {
+  "name": "纯烬艾雅法拉",
+  "en": "Eyjafjalla the Hvít Aska",
+  "ja": "純燼エイヤフィヤトラ",
+  "charId": "char_1016_agoat2",
+  "sortId": 293,
+  "profession": "医疗",
+  "subProfession": "行医"
+ },
+ {
+  "name": "涤火杰西卡",
+  "en": "Jessica the Liberated",
+  "ja": "滌火ジェシカ",
+  "charId": "char_1034_jesca2",
+  "sortId": 296,
+  "profession": "重装",
+  "subProfession": "哨戒铁卫"
+ },
+ {
+  "name": "赫德雷",
+  "en": "Hoederer",
+  "ja": "ヘドリー",
+  "charId": "char_4088_hodrer",
+  "sortId": 300,
+  "profession": "近卫",
+  "subProfession": "重剑手"
+ },
+ {
+  "name": "止颂",
+  "en": "Lessing",
+  "ja": "レッシング",
+  "charId": "char_4011_lessng",
+  "sortId": 304,
+  "profession": "近卫",
+  "subProfession": "无畏者"
+ },
+ {
+  "name": "薇薇安娜",
+  "en": "Viviana",
+  "ja": "ヴィヴィアナ",
+  "charId": "char_4098_vvana",
+  "sortId": 305,
+  "profession": "近卫",
+  "subProfession": "术战者"
+ },
+ {
+  "name": "塑心",
+  "en": "Virtuosa",
+  "ja": "ヴィルトゥオーサ",
+  "charId": "char_245_cello",
+  "sortId": 306,
+  "profession": "辅助",
+  "subProfession": "巫役"
+ },
+ {
+  "name": "锏",
+  "en": "Degenbrecher",
+  "ja": "デーゲンブレヒャー",
+  "charId": "char_4116_blkkgt",
+  "sortId": 309,
+  "profession": "近卫",
+  "subProfession": "剑豪"
+ },
+ {
+  "name": "莱伊",
+  "en": "Ray",
+  "ja": "レイ",
+  "charId": "char_4117_ray",
+  "sortId": 311,
+  "profession": "狙击",
+  "subProfession": "猎手"
+ },
+ {
+  "name": "左乐",
+  "en": "Zuo Le",
+  "ja": "ズオ・ラウ",
+  "charId": "char_4121_zuole",
+  "sortId": 314,
+  "profession": "近卫",
+  "subProfession": "武者"
+ },
+ {
+  "name": "黍",
+  "en": "Shu",
+  "ja": "シュウ",
+  "charId": "char_2025_shu",
+  "sortId": 315,
+  "profession": "重装",
+  "subProfession": "守护者"
+ },
+ {
+  "name": "艾拉",
+  "en": "Ela",
+  "ja": "Ela",
+  "charId": "char_4123_ela",
+  "sortId": 320,
+  "profession": "特种",
+  "subProfession": "陷阱师"
+ },
+ {
+  "name": "阿斯卡纶",
+  "en": "Ascalon",
+  "ja": "アスカロン",
+  "charId": "char_4132_ascln",
+  "sortId": 324,
+  "profession": "特种",
+  "subProfession": "伏击客"
+ },
+ {
+  "name": "魔王",
+  "en": "Civilight Eterna",
+  "ja": "シヴィライト・エテルナ",
+  "charId": "char_4134_cetsyr",
+  "sortId": 327,
+  "profession": "辅助",
+  "subProfession": "吟游者"
+ },
+ {
+  "name": "逻各斯",
+  "en": "Logos",
+  "ja": "ロゴス",
+  "charId": "char_4133_logos",
+  "sortId": 328,
+  "profession": "术师",
+  "subProfession": "中坚术师"
+ },
+ {
+  "name": "维什戴尔",
+  "en": "Wiš'adel",
+  "ja": "ウィシャデル",
+  "charId": "char_1035_wisdel",
+  "sortId": 329,
+  "profession": "狙击",
+  "subProfession": "投掷手"
+ },
+ {
+  "name": "乌尔比安",
+  "en": "Ulpianus",
+  "ja": "ウルピアヌス",
+  "charId": "char_4145_ulpia",
+  "sortId": 333,
+  "profession": "近卫",
+  "subProfession": "重剑手"
+ },
+ {
+  "name": "妮芙",
+  "en": "Nymph",
+  "ja": "ニンフ",
+  "charId": "char_4146_nymph",
+  "sortId": 335,
+  "profession": "术师",
+  "subProfession": "本源术师"
+ },
+ {
+  "name": "娜仁图亚",
+  "en": "Narantuya",
+  "ja": "ナラントゥヤ",
+  "charId": "char_4138_narant",
+  "sortId": 339,
+  "profession": "狙击",
+  "subProfession": "回环射手"
+ },
+ {
+  "name": "佩佩",
+  "en": "Pepe",
+  "ja": "ペペ",
+  "charId": "char_4058_pepe",
+  "sortId": 340,
+  "profession": "近卫",
+  "subProfession": "撼地者"
+ },
+ {
+  "name": "玛露西尔",
+  "en": "Marcille",
+  "ja": "マルシル",
+  "charId": "char_4141_marcil",
+  "sortId": 344,
+  "profession": "术师",
+  "subProfession": "扩散术师"
+ },
+ {
+  "name": "维娜·维多利亚",
+  "en": "Vina Victoria",
+  "ja": "ヴィーナ・ヴィクトリア",
+  "charId": "char_1019_siege2",
+  "sortId": 347,
+  "profession": "近卫",
+  "subProfession": "术战者"
+ },
+ {
+  "name": "弑君者",
+  "en": "Crownslayer",
+  "ja": "クラウンスレイヤー",
+  "charId": "char_1502_crosly",
+  "sortId": 351,
+  "profession": "特种",
+  "subProfession": "处决者"
+ },
+ {
+  "name": "忍冬",
+  "en": "Vulpisfoglia",
+  "ja": "ウルピスフォリア",
+  "charId": "char_4026_vulpis",
+  "sortId": 352,
+  "profession": "先锋",
+  "subProfession": "尖兵"
+ },
+ {
+  "name": "荒芜拉普兰德",
+  "en": "Lappland the Decadenza",
+  "ja": "荒蕪ラップランド",
+  "charId": "char_1038_whitw2",
+  "sortId": 353,
+  "profession": "术师",
+  "subProfession": "驭械术师"
+ },
+ {
+  "name": "引星棘刺",
+  "en": "Thorns the Lodestar",
+  "ja": "引星ソーンズ",
+  "charId": "char_1039_thorn2",
+  "sortId": 356,
+  "profession": "特种",
+  "subProfession": "炼金师"
+ },
+ {
+  "name": "烛煌",
+  "en": "Blaze the Igniting Spark",
+  "ja": "熾炎ブレイズ",
+  "charId": "char_1040_blaze2",
+  "sortId": 359,
+  "profession": "术师",
+  "subProfession": "本源术师"
+ },
+ {
+  "name": "余",
+  "en": "Yu",
+  "ja": "ユー",
+  "charId": "char_2026_yu",
+  "sortId": 360,
+  "profession": "重装",
+  "subProfession": "本源铁卫"
+ },
+ {
+  "name": "隐德来希",
+  "en": "Entelechia",
+  "ja": "エンテレケイア",
+  "charId": "char_4010_etlchi",
+  "sortId": 362,
+  "profession": "近卫",
+  "subProfession": "收割者"
+ },
+ {
+  "name": "死芒",
+  "en": "Necrass",
+  "ja": "ネクラス",
+  "charId": "char_450_necras",
+  "sortId": 365,
+  "profession": "术师",
+  "subProfession": "塑灵术师"
+ },
+ {
+  "name": "Mon3tr",
+  "en": "Mon3tr",
+  "ja": "Mon3tr",
+  "charId": "char_4179_monstr",
+  "sortId": 368,
+  "profession": "医疗",
+  "subProfession": "链愈师"
+ },
+ {
+  "name": "信仰搅拌机",
+  "en": "Sankta Miksaparato",
+  "ja": "サンクタ・ミキサー",
+  "charId": "char_4194_rmixer",
+  "sortId": 371,
+  "profession": "重装",
+  "subProfession": "哨戒铁卫"
+ },
+ {
+  "name": "蕾缪安",
+  "en": "Lemuen",
+  "ja": "レミュアン",
+  "charId": "char_4193_lemuen",
+  "sortId": 372,
+  "profession": "狙击",
+  "subProfession": "神射手"
+ },
+ {
+  "name": "新约能天使",
+  "en": "Exusiai the New Covenant",
+  "ja": "新約エクシア",
+  "charId": "char_1041_angel2",
+  "sortId": 373,
+  "profession": "特种",
+  "subProfession": "怪杰"
+ },
+ {
+  "name": "酒神",
+  "en": "Tragodia",
+  "ja": "トラゴーディア",
+  "charId": "char_1042_phatm2",
+  "sortId": 376,
+  "profession": "辅助",
+  "subProfession": "巫役"
+ },
+ {
+  "name": "司霆惊蛰",
+  "en": "Leizi the Thunderbringer",
+  "ja": "司霆レイズ",
+  "charId": "char_1043_leizi2",
+  "sortId": 378,
+  "profession": "近卫",
+  "subProfession": "解放者"
+ },
+ {
+  "name": "电弧",
+  "en": "Raidian",
+  "ja": "レイディアン",
+  "charId": "char_4195_radian",
+  "sortId": 379,
+  "profession": "辅助",
+  "subProfession": "召唤师"
+ },
+ {
+  "name": "遥",
+  "en": "Haruka",
+  "ja": "ハルカ",
+  "charId": "char_4202_haruka",
+  "sortId": 382,
+  "profession": "辅助",
+  "subProfession": "护佑者"
+ },
+ {
+  "name": "斩业星熊",
+  "en": "Hoshiguma the Breacher",
+  "ja": "斬業ホシグマ",
+  "charId": "char_1044_hsgma2",
+  "sortId": 383,
+  "profession": "重装",
+  "subProfession": "驭法铁卫"
+ },
+ {
+  "name": "丰川祥子",
+  "en": "Togawa Sakiko",
+  "ja": "豊川祥子",
+  "charId": "char_4182_oblvns",
+  "sortId": 388,
+  "profession": "近卫",
+  "subProfession": "领主"
+ },
+ {
+  "name": "真言",
+  "en": "Mantra",
+  "ja": "マントラ",
+  "charId": "char_4204_mantra",
+  "sortId": 391,
+  "profession": "术师",
+  "subProfession": "本源术师"
+ },
+ {
+  "name": "溯光星源",
+  "en": "Astgenne the Lightchaser",
+  "ja": "溯光アステジーニ",
+  "charId": "char_1047_halo2",
+  "sortId": 395,
+  "profession": "辅助",
+  "subProfession": "凝滞师"
+ },
+ {
+  "name": "圣聆初雪",
+  "en": "Pramanix the Prerita",
+  "ja": "聖聆プラマニクス",
+  "charId": "char_1046_sbell2",
+  "sortId": 396,
+  "profession": "术师",
+  "subProfession": "阵法术师"
+ },
+ {
+  "name": "凛御银灰",
+  "en": "SilverAsh the Reignfrost",
+  "ja": "凛御シルバーアッシュ",
+  "charId": "char_1045_svash2",
+  "sortId": 397,
+  "profession": "先锋",
+  "subProfession": "策士"
+ },
+ {
+  "name": "娜斯提",
+  "en": "Nasti",
+  "ja": "ナスティ",
+  "charId": "char_4212_nasti",
+  "sortId": 400,
+  "profession": "辅助",
+  "subProfession": "工匠"
+ },
+ {
+  "name": "缇缇",
+  "en": "Titi",
+  "ja": "ティティ",
+  "charId": "char_4056_titi",
+  "sortId": 403,
+  "profession": "医疗",
+  "subProfession": "咒愈师"
+ },
+ {
+  "name": "赤刃明霄陈",
+  "en": "Ch'en the Dawnstreak",
+  "ja": "赤刃明霄チェン",
+  "charId": "char_1050_chen3",
+  "sortId": 406,
+  "profession": "近卫",
+  "subProfession": "术战者"
+ },
+ {
+  "name": "望",
+  "en": "Wang",
+  "ja": "ウァン",
+  "charId": "char_2027_wang",
+  "sortId": 407,
+  "profession": "特种",
+  "subProfession": "陷阱师"
+ },
+ {
+  "name": "贝洛内",
+  "en": "Bellone",
+  "ja": "ベッローネ",
+  "charId": "char_4037_demetr",
+  "sortId": 409,
+  "profession": "近卫",
+  "subProfession": "斗士"
+ },
+ {
+  "name": "怒潮凛冬",
+  "en": "Zima the Raging Tide",
+  "ja": "怒潮ズィマー",
+  "charId": "char_1051_headb2",
+  "sortId": 412,
+  "profession": "近卫",
+  "subProfession": "撼地者"
+ },
+ {
+  "name": "维伊",
+  "en": "Вий",
+  "ja": "",
+  "charId": "char_4226_veen",
+  "sortId": 415,
+  "profession": "术师",
+  "subProfession": "秘术师"
+ },
+ {
+  "name": "可露希尔",
+  "en": "Closure",
+  "ja": "",
+  "charId": "char_4228_closur",
+  "sortId": 416,
+  "profession": "先锋",
+  "subProfession": "战术家"
+ },
+ {
+  "name": "凯尔希·思衡托",
+  "en": "Kal'tsit·Esperanta",
+  "ja": "",
+  "charId": "char_1052_kalts2",
+  "sortId": 417,
+  "profession": "医疗",
+  "subProfession": "守望者"
+ },
+ {
+  "name": "焰狐龙梓兰",
+  "en": "Violet Mizutsune Orchid",
+  "ja": "",
+  "charId": "char_1048_orchd2",
+  "sortId": 420,
+  "profession": "狙击",
+  "subProfession": "重射手"
+ },
+ {
+  "name": "谬因",
+  "en": "Aphrissa",
+  "ja": "",
+  "charId": "char_4229_aphris",
+  "sortId": 422,
+  "profession": "术师",
+  "subProfession": "轰击术师"
+ },
+ {
+  "name": "机械师",
+  "en": "Mechanist",
+  "ja": "",
+  "charId": "char_4230_mcnist",
+  "sortId": 423,
+  "profession": "重装",
+  "subProfession": "哨戒铁卫"
+ },
+ {
+  "name": "珊比",
+  "en": "Thumpy",
+  "ja": "",
+  "charId": "char_4235_thumpy",
+  "sortId": 426,
+  "profession": "重装",
+  "subProfession": "本源铁卫"
+ },
+ {
+  "name": "予愿安洁莉娜",
+  "en": "Angelina the Mellow Wish",
+  "ja": "",
+  "charId": "char_1015_aglna2",
+  "sortId": 427,
+  "profession": "特种",
+  "subProfession": "巡空者"
+ },
+ {
+  "name": "结城理",
+  "en": "Makoto Yuki",
+  "ja": "",
+  "charId": "char_4217_makoto",
+  "sortId": 431,
+  "profession": "特种",
+  "subProfession": "傀儡师"
+ }
+]

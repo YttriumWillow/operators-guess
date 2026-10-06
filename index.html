@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>猜六星干员</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <h1>猜六星干员 <span class="header-star">★6</span></h1>
+  <p class="subtitle">看图，把正确的名字拖（或点）上去</p>
+</header>
+
+<main class="container">
+
+  <!-- ① 出题 -->
+  <section id="screen-setup" class="screen">
+    <div class="toolbar">
+      <div class="seg" id="mode-seg" role="group" aria-label="答题图片形式">
+        <button type="button" data-mode="avatar" class="is-active">头像图</button>
+        <button type="button" data-mode="portrait">半身图</button>
+      </div>
+      <div class="rand-group">
+        <span class="muted">随机选人</span>
+        <button type="button" class="btn-mini" data-rand="6">6</button>
+        <button type="button" class="btn-mini" data-rand="10">10</button>
+        <button type="button" class="btn-mini" data-rand="15">15</button>
+        <button type="button" class="btn-mini" data-rand="20">20</button>
+      </div>
+      <input id="search" type="search" class="search" placeholder="搜索中文名 / 英文名…" autocomplete="off">
+    </div>
+    <div class="prof-chips" id="prof-chips"></div>
+    <div id="setup-grid" class="setup-grid"></div>
+    <div class="action-bar">
+      <span id="setup-count">已选 0 人</span>
+      <span class="spacer"></span>
+      <button type="button" id="btn-clear" class="btn-ghost">清空</button>
+      <button type="button" id="btn-start" class="btn-primary" disabled>开始游戏</button>
+    </div>
+  </section>
+
+  <!-- ② 答题 -->
+  <section id="screen-play" class="screen" hidden>
+    <div class="play-bar">
+      <span class="timer" id="timer">00:00</span>
+      <span id="play-progress" class="muted">已放置 0/0</span>
+      <span class="spacer"></span>
+      <button type="button" id="btn-quit" class="btn-ghost">放弃</button>
+      <button type="button" id="btn-reset" class="btn-ghost">重置</button>
+      <button type="button" id="btn-submit" class="btn-primary" disabled>提交</button>
+    </div>
+    <div id="play-grid" class="play-grid"></div>
+
+    <!-- 浮动待选区（固定在屏幕下方，可收起） -->
+    <div id="pool-dock" class="pool-dock">
+      <div class="pool-dock__bar" id="pool-bar" title="点击收起 / 展开">
+        <h2 class="pool-title">待选名字</h2>
+        <span id="pool-count" class="muted"></span>
+        <span class="spacer"></span>
+        <button type="button" id="btn-pool-toggle" class="btn-mini">收起 ▾</button>
+      </div>
+      <div id="pool" class="pool"></div>
+    </div>
+  </section>
+
+  <!-- ③ 结果 -->
+  <section id="screen-result" class="screen" hidden>
+    <div class="result-panel">
+      <div class="result-main"><span id="result-x">0</span><span class="result-sep">/</span><span id="result-n">0</span></div>
+      <div class="result-sub">
+        <span id="result-rate">正确率 0%</span>
+        <span class="dot">·</span>
+        <span id="result-time">用时 00:00</span>
+      </div>
+      <div class="result-actions">
+        <button type="button" id="btn-replay" class="btn-primary">同一批再玩一次</button>
+        <button type="button" id="btn-new" class="btn-ghost">重新选干员</button>
+      </div>
+    </div>
+    <div id="result-grid" class="play-grid is-locked"></div>
+  </section>
+
+</main>
+
+<div id="handoff" class="overlay" hidden>
+  <div class="overlay-card">
+    <h2>请把设备交给答题者</h2>
+    <p id="handoff-desc" class="muted"></p>
+    <button type="button" id="btn-handoff-go" class="btn-primary">开始答题</button>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
