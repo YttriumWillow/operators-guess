@@ -213,7 +213,9 @@ function beginQuiz(ids, mode) {
   state.poolIds = shuffle(ids.slice());
   state.activeChip = null;
 
-  history.replaceState(null, '', `#m=${mode}&ids=${ids.join(',')}`);
+  // 分享链接用稳定的数字序号（charIndex）压缩，如 #m=p&ids=73,74,75
+  const nums = ids.map(id => state.byId.get(id).sortId).join(',');
+  history.replaceState(null, '', `#m=${mode}&ids=${nums}`);
   $('#handoff-desc').textContent =
     `共 ${ids.length} 名六星干员 · ${mode === 'avatar' ? '头像图' : '半身图'} · 名字都在下方待选区`;
   $('#handoff').hidden = false;
@@ -566,8 +568,16 @@ function bindEvents() {
 function readHash() {
   const params = new URLSearchParams(location.hash.slice(1));
   const mode = params.get('m');
-  const ids = (params.get('ids') || '').split(',').filter(Boolean);
-  const valid = ids.filter(id => state.byId.has(id));
+  // 新格式是数字序号 sortId；纯数字按序号解析，其余按旧版 charId 兼容
+  const valid = [...new Set(
+    (params.get('ids') || '').split(',').filter(Boolean).map(raw => {
+      if (/^\d+$/.test(raw)) {
+        const op = state.operators.find(o => o.sortId === Number(raw));
+        return op ? op.charId : null;
+      }
+      return state.byId.has(raw) ? raw : null;
+    }).filter(Boolean)
+  )];
   if ((mode === 'avatar' || mode === 'portrait') && valid.length >= 2) {
     state.mode = mode;
     $$('#mode-seg button').forEach(b =>

@@ -69,6 +69,7 @@ const SCENARIO = `(async () => {
   out.startEnabledAfter6 = !document.getElementById('btn-start').disabled;
   document.getElementById('btn-start').click();
   await wait(() => !document.getElementById('handoff').hidden);
+  out.shareHash = location.hash;
   out.handoffText = document.getElementById('handoff-desc').textContent;
   document.getElementById('btn-handoff-go').click();
   await wait(() => !document.getElementById('screen-play').hidden);
@@ -200,6 +201,15 @@ await sleep(500); // 确保 fetch 数据完成
 let result;
 try {
   result = await page.evaluate(SCENARIO);
+
+  // 旧版长链接（charId）兼容性：设置 hash 后整页刷新触发 init/readHash
+  await page.evaluate(
+    `location.hash='#m=avatar&ids=char_103_angel,char_112_siege'; location.reload()`
+  ).catch(() => {});
+  await sleep(1200);
+  result.legacyHash = await page.evaluate(
+    `!document.getElementById('handoff').hidden && document.getElementById('handoff-desc').textContent`
+  );
 } finally {
   page.close();
 }
@@ -208,6 +218,8 @@ console.log(JSON.stringify(result, null, 2));
 
 const checks = [
   ['卡片总数 138', result.cardCount === 138],
+  ['分享链接使用数字编号', /^#m=avatar&ids=\d+(,\d+){5}$/.test(result.shareHash)],
+  ['旧版 charId 链接仍兼容', typeof result.legacyHash === 'string' && result.legacyHash.includes('2 名六星干员')],
   ['勾选计数 6', result.setupCount === '已选 6 人'],
   ['选 6 人后开始按钮可用', result.startEnabledAfter6 === true],
   ['交接提示出现', result.handoffText.includes('6 名六星干员')],
