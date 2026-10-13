@@ -45,13 +45,22 @@ function fmtTime(ms) {
   return h > 0 ? `${h}:${p(m)}:${p(ss)}` : `${p(m)}:${p(ss)}`;
 }
 
-const imgPath = (op, mode) => mode === 'avatar'
-  ? `assets/avatar/${op.charId}.png`
-  : `assets/portrait/${op.charId}_1.png`;
+/* 图片直链 PRTS：主源 torappu 游戏资源镜像，失败降级 media.wiki 上传库 */
+const imgPath = (op, mode) => mode === 'avatar' ? op.avatar : op.portrait;
+const imgAltPath = (op, mode) => mode === 'avatar' ? op.avatarAlt : op.portraitAlt;
 
-const setupImgPath = (id, mode) => mode === 'avatar'
-  ? `assets/avatar/${id}.png`
-  : `assets/portrait/${id}_1.png`;
+function makeImg(op, mode) {
+  const img = document.createElement('img');
+  img.loading = 'lazy';
+  img.alt = '';
+  img.src = imgPath(op, mode);
+  img.addEventListener('error', () => {
+    if (img.dataset.fb === '1') { img.style.visibility = 'hidden'; return; }
+    img.dataset.fb = '1';   // 主源失败，换 wiki 上传库直链
+    img.src = imgAltPath(op, mode);
+  });
+  return img;
+}
 
 function showScreen(name) {
   for (const n of ['setup', 'play', 'result']) {
@@ -102,10 +111,7 @@ function buildSetup() {
     const input = document.createElement('input');
     input.type = 'checkbox';
 
-    const img = document.createElement('img');
-    img.loading = 'lazy';
-    img.alt = '';
-    img.src = setupImgPath(op.charId, state.mode);
+    const img = makeImg(op, state.mode);
 
     const name = document.createElement('span');
     name.className = 'op-card__name';
@@ -189,11 +195,12 @@ function setMode(mode) {
   $$('#mode-seg button').forEach(b =>
     b.classList.toggle('is-active', b.dataset.mode === mode));
 
-  // 出题页卡片随模式显示头像 / 半身图
+  // 出题页卡片随模式切换头像 / 半身图（重建 img 以重置降级状态）
   const grid = $('#setup-grid');
   grid.classList.toggle('is-portrait', mode === 'portrait');
   for (const card of $$('#setup-grid .op-card')) {
-    card.querySelector('img').src = setupImgPath(card.dataset.id, mode);
+    const old = card.querySelector('img');
+    old.replaceWith(makeImg(state.byId.get(card.dataset.id), mode));
   }
 }
 
@@ -233,11 +240,7 @@ function renderPlay() {
 
     const imgWrap = document.createElement('div');
     imgWrap.className = 'qcard__img';
-    const img = document.createElement('img');
-    img.loading = 'lazy';
-    img.alt = '';
-    img.src = imgPath(op, state.mode);
-    imgWrap.append(img);
+    imgWrap.append(makeImg(op, state.mode));
 
     const slot = document.createElement('div');
     slot.className = 'slot';
@@ -403,11 +406,7 @@ function submitQuiz() {
 
     const imgWrap = document.createElement('div');
     imgWrap.className = 'qcard__img';
-    const img = document.createElement('img');
-    img.loading = 'lazy';
-    img.alt = '';
-    img.src = imgPath(op, state.mode);
-    imgWrap.append(img);
+    imgWrap.append(makeImg(op, state.mode));
 
     const slot = document.createElement('div');
     slot.className = 'slot';

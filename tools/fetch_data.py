@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-拉取 PRTS 六星干员元数据与图片，生成静态站点所需数据。
+拉取 PRTS 六星干员元数据，生成静态站点所需数据 js/data/operators.json。
 
 - 元数据：PRTS Cargo API（chara 表，rarity=5 即六星，charIndex>0 排除卫戍协议等非获取角色）
-- 图片：优先 torappu.prts.wiki 游戏资源镜像，失败时降级 media.prts.wiki 上传库
-出新干员后重跑本脚本即可（已存在的图片会跳过）。
+- 图片不入库：JSON 中直接写入 PRTS 官方同源图片地址，网页运行时热链
+  · 主源 torappu.prts.wiki（游戏资源镜像，PRTS 前端优先使用）
+  · 备源 media.prts.wiki（wiki 上传库，md5 哈希目录，前端加载失败时由 JS 降级）
+- 可选 --download-images：把图片缓存到 assets/（离线/备份用途，部署不需要）
+
+出新干员后重跑本脚本即可。
 """
+import argparse
 import hashlib
 import json
 import os
@@ -43,6 +48,14 @@ PARAMS = {
 }
 
 
+def wiki_url(filename):
+    """media.prts.wiki 的 md5 哈希目录直链，与官方前端 xb() 逻辑一致。"""
+    h = hashlib.md5(filename.encode("utf-8")).hexdigest()
+    return "%s/%s/%s/%s" % (
+        MEDIA, h[0], h[:2], urllib.parse.quote(filename)
+    )
+
+
 def fetch_json():
     url = CARGO_API + "?" + urllib.parse.urlencode(PARAMS)
     print("GET", url)
@@ -52,37 +65,32 @@ def fetch_json():
     operators = []
     for row in payload["cargoquery"]:
         t = row["title"]
+        char_id = t["charId"]
+        name = t["name"]
         operators.append({
-            "name": t["name"],
+            "name": name,
             "en": t["en"],
             "ja": t["ja"],
-            "charId": t["charId"],
+            "charId": char_id,
             "sortId": int(t["sortId"]),
             "profession": t["profession"],
             "subProfession": t["subProfession"],
+            "avatar": "%s/char_avatar/%s.png" % (TORAPPU, char_id),
+            "avatarAlt": wiki_url("头像_%s.png" % name),
+            "portrait": "%s/char_portrait/%s_1.png" % (TORAPPU, char_id),
+            "portraitAlt": wiki_url("半身像_%s_1.png" % name),
         })
     operators.sort(key=lambda o: o["sortId"])
     return operators
 
 
-def wiki_url(filename):
-    """media.prts.wiki 的 md5 哈希目录直链，与官方前端 xb() 逻辑一致。"""
-    h = hashlib.md5(filename.encode("utf-8")).hexdigest()
-    return "%s/%s/%s/%s" % (
-        MEDIA, h[0], h[:2], urllib.parse.quote(filename)
-    )
-
-
 def download_one(op):
     char_id = op["charId"]
-    name = op["name"]
     jobs = [
         ("avatar", os.path.join(AVATAR_DIR, char_id + ".png"),
-         "%s/char_avatar/%s.png" % (TORAPPU, char_id),
-         wiki_url("头像_%s.png" % name)),
+         op["avatar"], op["avatarAlt"]),
         ("portrait", os.path.join(PORTRAIT_DIR, char_id + "_1.png"),
-         "%s/char_portrait/%s_1.png" % (TORAPPU, char_id),
-         wiki_url("半身像_%s_1.png" % name)),
+         op["portrait"], op["portraitAlt"]),
     ]
     results = []
     for kind, dest, primary, fallback in jobs:
@@ -109,14 +117,23 @@ def download_one(op):
 
 
 def main():
-    for d in (AVATAR_DIR, PORTRAIT_DIR, os.path.dirname(DATA_PATH)):
-        os.makedirs(d, exist_ok=True)
+    parser = argparse.ArgumentParser(description="生成六星干员数据")
+    parser.add_argument("--download-images", action="store_true",
+                        help="同时把头像/半身像下载到 assets/（默认只更新 JSON）")
+    args = parser.parse_args()
 
+    os.makedirs(os.path.dirname(DATA_PATH), exist_ok=True)
     operators = fetch_json()
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(operators, f, ensure_ascii=False, indent=1)
     print("wrote %s (%d operators)" % (DATA_PATH, len(operators)))
 
+    if not args.download_images:
+        print("skip image download (use --download-images to cache them locally)")
+        return
+
+    for d in (AVATAR_DIR, PORTRAIT_DIR):
+        os.makedirs(d, exist_ok=True)
     failures = []
     with ThreadPoolExecutor(max_workers=8) as pool:
         for i, (char_id, results) in enumerate(pool.map(download_one, operators), 1):
@@ -130,7 +147,7 @@ def main():
         for char_id, results in failures:
             print(" ", char_id, results)
         sys.exit(1)
-    print("\nall done: %d operators, images in %s" % (len(operators), os.path.join(ROOT, "assets")))
+    print("\nall images cached in %s" % os.path.join(ROOT, "assets"))
 
 
 if __name__ == "__main__":

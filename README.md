@@ -34,7 +34,7 @@ python -m http.server 8000
   （`wrangler.jsonc` 已配置 `pages_build_output_dir: dist`，项目已存在于账号下）：
 
   ```sh
-  rm -rf dist && mkdir dist && cp index.html .nojekyll dist/ && cp -r css js assets dist/
+  rm -rf dist && mkdir dist && cp index.html .nojekyll dist/ && cp -r css js dist/
   wrangler pages deploy
   ```
 
@@ -42,17 +42,27 @@ python -m http.server 8000
 
   > 注意：如 wrangler 提示把项目委托给 Workers 且你想用经典 Pages，首次创建项目时需加 `--force`。
 
+## 图片来源
+
+仓库与部署包**不包含图片文件**，运行时直接热链 PRTS 的图片地址（与 PRTS 前端同一套逻辑）：
+
+- 主源：`https://torappu.prts.wiki/assets/char_avatar|char_portrait/{charId}.png`
+- 备源：主源加载失败时自动切换到 `https://media.prts.wiki/{md5}/头像_{名}.png`
+  （半身像为 `半身像_{名}_1.png`）
+
+需要离线备份图片时可运行 `python tools/fetch_data.py --download-images` 缓存到 `assets/`（该目录不入部署包）。
+
 ## 数据更新
 
-干员数据与图片已缓存在仓库内（`js/data/operators.json`、`assets/`）。游戏出新六星后重跑：
+出新六星后重跑即可刷新 `js/data/operators.json`（含干员元数据与主/备图片地址）：
 
 ```sh
 python tools/fetch_data.py
 ```
 
-脚本通过 PRTS Cargo API 获取 137 名（当前）六星干员元数据，并从 torappu 资源镜像补下载新图片（失败自动降级 media.prts.wiki），已存在的文件跳过。提交更新后的文件再重新部署即可。
+数据来自 PRTS Cargo API（`chara` 表，`rarity=5 AND charIndex>0`），提交更新后的 JSON 再重新部署即可。
 
 ## 数据来源
 
-- 干员数据与图片：[PRTS](https://prts.wiki/)（Cargo API / torappu 资源镜像）
+- 干员数据与图片：[PRTS](https://prts.wiki/)（Cargo API / torappu、media 资源镜像）
 - 相关素材版权归 **鹰角网络 / PRTS** 所有，本项目仅供玩家间娱乐交流。

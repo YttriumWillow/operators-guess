@@ -148,9 +148,9 @@ const SCENARIO = `(async () => {
   /* ---- 局 4：半身缩略图 + 浮动 dock + 放弃按钮 ---- */
   out.r4 = {};
   document.querySelector('#mode-seg button[data-mode="avatar"]').click();
-  out.r4.setupAvatarSrc = document.querySelector('.op-card img').src.includes('/avatar/');
+  out.r4.setupAvatarSrc = document.querySelector('.op-card img').src.includes('char_avatar/');
   document.querySelector('#mode-seg button[data-mode="portrait"]').click();
-  out.r4.setupPortraitSrc = document.querySelector('.op-card img').src.includes('/portrait/');
+  out.r4.setupPortraitSrc = document.querySelector('.op-card img').src.includes('char_portrait/');
   out.r4.setupGridClass = document.getElementById('setup-grid').className;
 
   document.getElementById('btn-clear').click();
@@ -207,7 +207,7 @@ try {
 console.log(JSON.stringify(result, null, 2));
 
 const checks = [
-  ['卡片总数 137', result.cardCount === 137],
+  ['卡片总数 138', result.cardCount === 138],
   ['勾选计数 6', result.setupCount === '已选 6 人'],
   ['选 6 人后开始按钮可用', result.startEnabledAfter6 === true],
   ['交接提示出现', result.handoffText.includes('6 名六星干员')],
